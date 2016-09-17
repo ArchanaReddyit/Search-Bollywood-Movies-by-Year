@@ -20,13 +20,21 @@ app.controller('allMovie', function($scope, GetData, $routeParams, $route, $loca
     $scope.gotoMovie = function(id){
         $location.path( "/id/" + id );
     }; 
+
+    // redirect to page
+    $scope.gotoMovieYear = function(year){
+        $location.path( "/year/" + year );
+    }; 
+
+    
 }); 
 
 // controller
 app.controller('singleMovie', function($scope, GetData, $routeParams) {
     GetData.movieData('id', $routeParams.ID,function(response) {
-      $scope.movie = response;
+        $scope.movie = response;
     });
+
 });
 
 // routes
