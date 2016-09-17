@@ -1,0 +1,9 @@
+<div class="row" ng-repeat="amovie in movie">
+	<div class="col-lg-12 col-lg-12" >
+	   <h1 ng-click="gotoMovie(amovie.Id)" class="show-cursor">{{amovie.Title}}</h1>
+	   <p>Description: {{amovie.Description}}</p>
+	   <p>Genre: {{amovie.Genre}} </p>
+	   <p ng-show="{{amovie.Runtime}}">Runtime:{{amovie.Runtime}}</p>
+	   <img ng-src="{{amovie.PosterPath}}" alt="" ng-click="gotoMovie(amovie.Id)" class="show-cursor">
+	</div>
+</div>
