@@ -12,6 +12,9 @@ app.factory('GetData', function ($http) {
 
 // controller
 app.controller('allMovie', function($scope, GetData, $routeParams, $route, $location) {
+
+    $scope.year = $routeParams.year ;
+
     GetData.movieData('year',$routeParams.year,function(response) {
       $scope.movie = response;      
     });
